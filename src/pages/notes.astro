@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NotesPost from '../components/NotesPost.astro';
+import { isFrontmatterValid } from 'astro/markdown';
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const pageTitle = "NOTES";
+---
+<BaseLayout pageTitle={pageTitle}>
+  <h2 class="notes-header">PRECALCULUS</h2>
+  <ul>
+    {allPosts
+		  .filter((post:any)=> post.frontmatter.Precalculus)
+		  .map((post: any) => <NotesPost url={post.url} title={post.frontmatter.title} />)}
+  </ul>
+</BaseLayout>
