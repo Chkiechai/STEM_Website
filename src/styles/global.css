@@ -9,6 +9,7 @@ body {
   max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
+  color:#ffffff;
 }
 
 * {
@@ -41,7 +42,7 @@ h1 {
 
 .nav-links a {
   display: block;
-  color: #ffffff;
+  color: #faac8d;
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
@@ -50,14 +51,14 @@ h1 {
   text-transform: uppercase;
 
   &:visited {
-    color: #ffffff;
+    color: #faac8d;
     text-align: center;
   }
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #aa553b;
+  background-color: #972e0e;
   text-align: center;
 }
 
@@ -95,17 +96,43 @@ h1 {
 /* Notes Headers */
     .notes-header{
         color:#ffffff;
-        text-decoration: underline;
+        text-decoration: none;
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
     }
 
 /* footer links */
     .footer-links {
-        color: #ff7950;
-        text-decoration: underline;
+        color: #ff7044;
+        text-decoration: none;
         font-weight: bold;
+        background-color: #61100a;
+        border: none;
+        font-weight: bold;
+        padding: 5px 10px;
 
         &visited {
-            color: #ff7950;
+            color: #ff7044;
         }
+    }
+
+/* Header 1 Stuff */
+    .notes-header-1{
+      color:#ffb77d;
+      font-family:cursive;
+      text-decoration: underline;
+    }
+
+    .page-title{
+      color:#ffffff;
+      font-family:Arial, Helvetica, sans-serif;
+      text-decoration: none;
+    }
+
+/* homepage subtitle */
+    .page-subtitle{
+      color:#ff9147;
+      font-family:Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.3rem;
     }

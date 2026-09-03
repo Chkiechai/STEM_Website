@@ -5,11 +5,26 @@ import { isFrontmatterValid } from 'astro/markdown';
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const pageTitle = "NOTES";
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2 class="notes-header">PRECALCULUS</h2>
+<BaseLayout>
+  <h1 class="notes-header-1">Mathematics</h1>
+  <h2 class="notes-header">PreCalculus</h2>
   <ul>
     {allPosts
 		  .filter((post:any)=> post.frontmatter.Precalculus)
+		  .map((post: any) => <NotesPost url={post.url} title={post.frontmatter.title} />)}
+  </ul>
+
+  <h2 class="notes-header">Calculus</h2>
+  <ul>
+    {allPosts
+		  .filter((post:any)=> post.frontmatter.Calculus)
+		  .map((post: any) => <NotesPost url={post.url} title={post.frontmatter.title} />)}
+  </ul>
+<h1 class="notes-header-1">Physics</h1>
+  <h2 class="notes-header">Regular Physics</h2>
+  <ul>
+    {allPosts
+		  .filter((post:any)=> post.frontmatter.Physics)
 		  .map((post: any) => <NotesPost url={post.url} title={post.frontmatter.title} />)}
   </ul>
 </BaseLayout>
